@@ -7,10 +7,10 @@ const Navbar = () => {
         <header className="navigation">
             <nav className="navigation-nav">
                 <GiAllSeeingEye size={24}/>
-                <div>
+                <div className="navigation-nav">
                     {navList.map((item) => (
-                        <div key={item}>
-                            {item}
+                        <div className="navigation-item" key={item}>
+                            <a href={`#${item}`}>{item}</a>
                         </div>
                     ))}
                 </div>

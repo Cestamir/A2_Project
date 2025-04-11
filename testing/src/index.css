@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Underdog&display=swap');
 
+body {
+    font-family: "Underdog", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
 
 .navigation {
     display: flex;
@@ -14,3 +20,96 @@
     align-items: center;
     gap: 1rem;
 }
+
+.navigation-item {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.loot {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.loot-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    transition: transform 0.3s ease;
+}
+
+.loot-item:hover {
+    background-color: #ffcac3;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 50%;
+    transform: scale(1.05);
+}
+
+.hero {
+    background-image: url("assets/pexels-sulimansallehi-1484776.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Hero display */
+
+.hero-card {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.hero-card:hover {
+    border: 1px solid red;
+    transform: scale(1.05);
+    background-color: #d7ffd5;
+}
+
+.hero-display {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-display .slider {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+}
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    } to {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+          }
+}
+
+/*
+.card-item {
+    position: absolute;
+    inset: 0 0 0 0;
+}
+ */
