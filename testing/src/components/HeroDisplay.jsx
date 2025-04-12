@@ -19,7 +19,7 @@ const HeroDisplay = () => {
             position: 'absolute',
             inset: '0 0 0 0',
             transform: `rotateY(${cardPosition}deg)
-            translateZ(500px)`,
+            translateZ(400px)`,
         }
     }
 

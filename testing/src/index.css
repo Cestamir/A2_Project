@@ -7,6 +7,7 @@ body {
 }
 
 .navigation {
+    min-height: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -18,7 +19,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .navigation-item {
@@ -26,13 +27,25 @@ body {
     text-transform: uppercase;
     font-style: italic;
 }
+.navigation-item a {
+    text-decoration: none;
+    color: white;
+}
+.navigation-item a:hover {
+    color: red;
+    transform: scale(1.05);
+    text-shadow: 1px 0 white, -1px 0 white, 0 1px white, 0 -1px white;
+
+}
 
 .container {
     height: 100vh;
     width: 100vw;
 }
+/* LOOT */
 
 .loot {
+    margin-top: 200px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
@@ -40,6 +53,7 @@ body {
 .loot-item {
     display: flex;
     flex-direction: column;
+    max-width: 150px;
     align-items: center;
     border: 1px solid black;
     transition: transform 0.3s ease;
@@ -49,7 +63,7 @@ body {
     background-color: #ffcac3;
     cursor: pointer;
     border: 1px solid gray;
-    border-radius: 50%;
+    border-radius: 10%;
     transform: scale(1.05);
 }
 
@@ -107,9 +121,109 @@ body {
           }
 }
 
+
+
 /*
-.card-item {
-    position: absolute;
-    inset: 0 0 0 0;
+hero head text
+*/
+
+.head-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
- */
+
+.head-text h1 {
+    font-size: 4rem;
+        text-shadow: 1px 0 black, -1px 0 black, 0 1px black, 0 -1px black;
+}
+
+
+/*
+STORY
+*/
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.banner .content .title {
+    font-size: 5rem;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("assets/pexels-hoffman11-19328719.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+
+    mask-image: url("assets/inkoustgif.gif");
+    mask-size: cover;
+    mask-position: center;
+}
+
+/* DRAGON */
+
+.dragon {
+    background-image: url("assets/pexels-carol-wd-1531174-3118564.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dragon div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dragon div p {
+    color: white;
+    font-size: 1.3rem;
+}
+
+#dragon {
+    background-color: white;
+}
+
+.dragontext path {
+    fill: transparent;
+    stroke: red;
+    stroke-width: 0.15;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: textAnimation 4s ease-in-out 1 forwards;
+}
+
+@keyframes textAnimation {
+    0% {
+        stroke-dashoffset: 50;}
+    80% {
+        fill: transparent;
+    } 100% {
+        fill: red;
+        stroke-dashoffset: 0;
+          }
+}
+
+

@@ -10,7 +10,9 @@ const Hero = () => {
 
     return (
         <div id="hero" className="hero container">
-            <h1>Hero Page</h1>
+            <div className="head-text">
+                <h1>BE A HERO OR VILLIAN</h1>
+            </div>
             <Button description={"Klikni sem!"} onClickBtn={handleOnClickBtn}/>
             <HeroDisplay/>
         </div>

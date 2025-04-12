@@ -9,10 +9,11 @@ const App = () => {
     return (
         <div>
             <Navbar/>
+            <Story/>
             <Hero/>
             <Loot/>
             <Dragon/>
-            <Story/>
+
         </div>
     )
 }
